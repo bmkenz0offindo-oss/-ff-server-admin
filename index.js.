@@ -1,0 +1,20 @@
+const express = require('express');
+const app = express();
+
+app.get('/live/version', (req, res) => {
+  res.json({
+    "status": "success",
+    "notice": {
+      "title": "ADMIN LÊ DUY CHÀO CON TRAI",
+      "content": "Chào mừng con vào Sever của bố Lê Duy! Hack ít thôi không bay acc nhé.",
+      "show_type": 1
+    },
+    "mod": {
+      "antenna": "active", // Tay dài
+      "headshot": "99%",  // Nhẹ tâm
+      "skin": "blue_dragon" // Súng xanh
+    }
+  });
+});
+
+app.listen(process.env.PORT || 3000);
